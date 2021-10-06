@@ -1,20 +1,11 @@
 
-def summation(sum):
-    lst=[int(i) for i in sum.split()]
-    sum=0
-    Maximum=max(lst)
-    for i in lst:
-        if i<0:
-            i*=-1
-            i*=2
+def summation(s):
+    lst = [int(i) for i in s.split()] ##парсим в список в int
+    for i in range(len(lst)): #отрицательные значения умн на -2
+        if lst[i]<0:
+            lst[i]*=-2
 
-        i /= Maximum
-        sum+=i
+    return sum([i/max(lst) for i in lst]) #возвращаем сумму нормализованных чисел
 
-    return sum
-
-
-sum=input()
-x=summation(sum)
-x=float('{:.3f}'.format(x))
-print(x)
+s=input()
+print(summation(s))
