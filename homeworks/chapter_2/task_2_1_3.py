@@ -1,2 +1,2 @@
-def func(*args):
+def debug_control(*args):
     return len(args)
