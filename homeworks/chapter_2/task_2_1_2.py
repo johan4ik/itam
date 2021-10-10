@@ -7,5 +7,4 @@ def summation(s):
 
     return sum([i/max(lst) for i in lst]) #возвращаем сумму нормализованных чисел
 
-s=input()
-print(summation(s))
+
